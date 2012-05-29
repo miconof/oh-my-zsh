@@ -62,6 +62,18 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 # Set PATH
+export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/work/android/android-sdk-linux_86/tools
 export PATH=$PATH:$HOME/work/android/android-sdk-linux_86/platform-tools
+
+# Set gem5 paths and environment variables
+export M5_PATH=$HOME/gem5/m5_system_2.0b3
+export CC=gcc
+export CXX=g++
+
+# Set other paths
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/llvm25/lib/:/opt/llvm25/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/:/usr/local/lib:/usr/local/lib/iljit
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
+export ILDJIT_PATH=/usr/local/lib/cscc/lib
