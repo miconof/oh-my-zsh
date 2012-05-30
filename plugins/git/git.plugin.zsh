@@ -218,6 +218,8 @@ alias grt='cd $(git rev-parse --show-toplevel || echo ".")'
 alias gru='git reset --'
 alias grup='git remote update'
 alias grv='git remote -v'
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+compdef _git glg=git-log
 
 alias gsb='git status -sb'
 alias gsd='git svn dcommit'
@@ -246,3 +248,10 @@ alias glum='git pull upstream master'
 
 alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
 alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify -m "--wip-- [skip ci]"'
+# these aliases take advantage of the previous function
+alias ggpull='git pull origin $(current_branch)'
+compdef ggpull=git
+alias ggpush='git push origin $(current_branch)'
+compdef ggpush=git
+alias ggpnp='git pull origin $(current_branch) && git push origin $(current_branch)'
+compdef ggpnp=git
