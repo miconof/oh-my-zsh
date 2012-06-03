@@ -32,3 +32,8 @@ alias la='ls -lAh'
 # Push and pop directories on directory stack
 alias pu='pushd'
 alias po='popd'
+
+# mkdir & cd to it
+function mcd() { 
+  mkdir -p "$1" && cd "$1"; 
+}
