@@ -29,6 +29,13 @@ alias l='ls -lah'
 alias ll='ls -lh'
 alias la='ls -lAh'
 
+<<<<<<< e383fcd136ada307f35606c4319b7c5a79f35fb2
 # Push and pop directories on directory stack
 alias pu='pushd'
 alias po='popd'
+=======
+# mkdir & cd to it
+function mcd() { 
+  mkdir -p "$1" && cd "$1"; 
+}
+>>>>>>> minor fixes to alias in plugins
