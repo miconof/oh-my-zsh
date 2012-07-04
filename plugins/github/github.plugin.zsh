@@ -23,8 +23,8 @@ fi
 #
 # Use this when creating a new repo from scratch.
 empty_gh() { # [NAME_OF_REPO]
-    repo = $1
-    ghuser=$(  git config github.user )
+    repo="$1"
+    ghuser="$( git config github.user )"
 
     mkdir "$repo"
     cd "$repo"
@@ -32,7 +32,7 @@ empty_gh() { # [NAME_OF_REPO]
     touch README
     git add README
     git commit -m 'Initial commit.'
-    git remote add origin git@github.com:${ghuser}/${repo}.git
+    git remote add origin git@github.com:"${ghuser}"/"${repo}".git
     git push -u origin master
 }
 
@@ -42,7 +42,7 @@ empty_gh() { # [NAME_OF_REPO]
 # This function will add all non-hidden files to git.
 new_gh() { # [DIRECTORY]
     cd "$1"
-    ghuser=$( git config github.user )
+    ghuser="$( git config github.user )"
 
     git init
     # add all non-dot files
@@ -59,12 +59,11 @@ new_gh() { # [DIRECTORY]
 # to your GitHub.
 exist_gh() { # [DIRECTORY]
     cd "$1"
-    name=$( git config user.name )
-    ghuser=$( git config github.user )
+    name="$( git config user.name )"
+    ghuser="$( git config github.user )"
 
     git remote add origin git@github.com:${ghuser}/${repo}.git
     git push -u origin master
 }
 
 # End Functions #############################################################
-
