@@ -12,12 +12,17 @@ fi
 # Use this when creating a new repo from scratch.
 # Creates a new repo with a blank README.md in it and pushes it up to GitHub.
 empty_gh() { # [NAME_OF_REPO]
-  emulate -L zsh
-  local repo=$1
+    repo="$1"
+    ghuser="$( git config github.user )"
 
-  mkdir "$repo"
-  touch "$repo/README.md"
-  new_gh "$repo"
+    mkdir "$repo"
+    cd "$repo"
+    git init
+    touch README
+    git add README
+    git commit -m 'Initial commit.'
+    git remote add origin git@github.com:"${ghuser}"/"${repo}".git
+    git push -u origin master
 }
 
 # new_gh [DIRECTORY]
@@ -25,10 +30,8 @@ empty_gh() { # [NAME_OF_REPO]
 # Use this when you have a directory that is not yet set up for git.
 # This function will add all non-hidden files to git.
 new_gh() { # [DIRECTORY]
-  emulate -L zsh
-  local repo="$1"
-  cd "$repo" \
-    || return
+    cd "$1"
+    ghuser="$( git config github.user )"
 
   git init \
     || return
@@ -51,14 +54,9 @@ new_gh() { # [DIRECTORY]
 # Use this when you have a git repo that's ready to go and you want to add it
 # to your GitHub.
 exist_gh() { # [DIRECTORY]
-  emulate -L zsh
-  local repo=$1
-  cd "$repo"
-
-  hub create \
-    || return
-  git push -u origin master
-}
+    cd "$1"
+    name="$( git config user.name )"
+    ghuser="$( git config github.user )"
 
 # git.io "GitHub URL"
 #
@@ -73,4 +71,3 @@ git.io() {
 }
 
 # End Functions #############################################################
-
