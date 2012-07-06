@@ -29,7 +29,7 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git github ssh-agent debian mplayer todo.txt command-not-found)
+plugins=(git github debian mplayer todo.txt command-not-found)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -53,4 +53,4 @@ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
 export ILDJIT_PATH=/usr/local/lib/cscc/lib
 
 # SSH agent options
-zstyle :omz:plugins:ssh-agent agent-forwarding on
+#zstyle :omz:plugins:ssh-agent agent-forwarding on
