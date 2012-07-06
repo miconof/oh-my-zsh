@@ -81,7 +81,6 @@ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
 export ILDJIT_PATH=/usr/local/lib/cscc/lib
 
 # SSH agent options
-<<<<<<< 60c7e2c78adf759a80c0125151025fc6712070e4
 #zstyle :omz:plugins:ssh-agent agent-forwarding on
 
 # Sniper configuration variables:
@@ -125,6 +124,3 @@ export MCC_PATH=$HOME/projects/mb3/sw/ompss-emilio/mcxx-1.99.8
 export LD_LIBRARY_PATH=/usr/local/lib/:$LD_LIBRARY_PATH
 
 export PYTHONPATH=$HOME/repos/paperplot:$PYTHONPATH
-=======
-zstyle :omz:plugins:ssh-agent agent-forwarding on
->>>>>>> activating agent forwarding and new plugins
