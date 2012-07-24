@@ -220,9 +220,9 @@ alias grup='git remote update'
 alias grv='git remote -v'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 compdef _git glg=git-log
-alias gd='git diff --color=always -U1 --minimal'
+alias gd='git diff --color=always -U2'
 compdef _git gd=git-diff
-alias gdw='git diff --color=always --color-words -U1 --minimal'
+alias gdw='git diff --color=always --color-words -U2'
 compdef _git gd=git-diff
 
 alias gsb='git status -sb'
