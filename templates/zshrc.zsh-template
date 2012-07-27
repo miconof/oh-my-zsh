@@ -74,6 +74,10 @@ export M5_PATH=$HOME/projects/mb3/repos/gem5_path
 #export CC=gcc
 #export CXX=g++
 
+# Set Bluespec paths and environment variables
+export BLUESPECDIR="$HOME/Bluespec/lib"
+export LM_LICENSE_FILE="$HOME/Bluespec/license/Bluespec.lic"
+
 # Set other paths
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib:/usr/lib/llvm-3.4:/usr/lib/llvm-3.4/lib
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/:/usr/local/lib:/usr/local/lib/iljit
