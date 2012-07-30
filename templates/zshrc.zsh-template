@@ -29,7 +29,7 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git github debian mplayer todo.txt command-not-found mercurial)
+plugins=(git github debian mplayer todo.txt command-not-found mercurial vim)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -39,6 +39,9 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/Bluespec/bin
+
+# Set PATH for todo.txt
+export PATH=$PATH:$HOME/repos/dotfiles/todo.txt
 
 # Set gem5 paths and environment variables
 export M5_PATH=$HOME/gem5/m5_system_2.0b3
