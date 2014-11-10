@@ -38,7 +38,6 @@ source $ZSH/oh-my-zsh.sh
 # Set PATH
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:$HOME/bin
-export PATH=$PATH:$HOME/Bluespec/bin
 
 # Set PATH for todo.txt
 export PATH=$PATH:$HOME/repos/dotfiles/todo.txt
@@ -48,10 +47,6 @@ export M5_PATH=$HOME/gem5/m5_system_2.0b3
 export CC=gcc
 export CXX=g++
 
-# Set Bluespec paths and environment variables
-export BLUESPECDIR="$HOME/Bluespec/lib"
-export LM_LICENSE_FILE="$HOME/Bluespec/license/Bluespec.lic"
-
 # Set other paths
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/llvm25/lib/:/opt/llvm25/
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/:/usr/local/lib:/usr/local/lib/iljit
@@ -60,3 +55,22 @@ export ILDJIT_PATH=/usr/local/lib/cscc/lib
 
 # SSH agent options
 #zstyle :omz:plugins:ssh-agent agent-forwarding on
+
+# Sniper configuration variables:
+export GRAPHITE_ROOT=$HOME/projects/AXLE/sniper-axle
+export SNIPER_ROOT=$HOME/projects/AXLE/sniper-axle
+export BENCHMARKS_ROOT=$HOME/projects/AXLE/sniper-axle/benchmarks
+export DBGENDIR=$HOME/projects/AXLE/pg-tpch/
+
+#Zsim pin path
+export PINPATH=$HOME/projects/AXLE/zsim/pin_kit
+export DRAMSIMPATH=$HOME/projects/AXLE/zsim/DRAMSim2
+export NVMAINPATH=$HOME/projects/AXLE/zsim/nvmain
+export ZSIMPATH=$HOME/projects/AXLE/zsim
+export PGPATH=$HOME/projects/AXLE/postgres
+export BOOST=$HOME/prog/boost
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$BOOST/stage/lib
+export SPECDIR=$HOME/projects/AXLE/SPECCPU2006
+
+# Set PATH for postgresql
+export PATH=$PGPATH/build/bin:$PATH
