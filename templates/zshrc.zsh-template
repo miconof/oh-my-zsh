@@ -68,18 +68,11 @@ export PATH=$PATH:$HOME/bin
 # Set PATH for todo.txt
 export PATH=$PATH:$HOME/repos/dotfiles/todo.txt
 
-# Set PATH for todo.txt
-export PATH=$PATH:$HOME/repos/dotfiles/todo.txt
-
 # Set gem5 paths and environment variables
 #export M5_PATH=$HOME/gem5/m5_system_2.0b3
 export M5_PATH=$HOME/projects/mb3/repos/gem5_path
 #export CC=gcc
 #export CXX=g++
-
-# Set Bluespec paths and environment variables
-export BLUESPECDIR="$HOME/Bluespec/lib"
-export LM_LICENSE_FILE="$HOME/Bluespec/license/Bluespec.lic"
 
 # Set other paths
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib:/usr/lib/llvm-3.4:/usr/lib/llvm-3.4/lib
