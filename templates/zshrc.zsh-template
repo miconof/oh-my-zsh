@@ -20,7 +20,7 @@ DISABLE_AUTO_UPDATE="true"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -88,7 +88,7 @@ export CC=gcc
 export CXX=g++
 
 # Set other paths
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/llvm25/lib/:/opt/llvm25/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib:/usr/lib/llvm-3.4:/usr/lib/llvm-3.4/lib
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/:/usr/local/lib:/usr/local/lib/iljit
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
 export ILDJIT_PATH=/usr/local/lib/cscc/lib
@@ -114,4 +114,6 @@ export SPECDIR=$HOME/projects/AXLE/SPECCPU2006
 
 # Set PATH for postgresql
 export PATH=$PGPATH/build/bin:$PATH
+export PATH=$HOME/bin/monetdb/bin:$PATH
 
+export TERM=xterm-256color
