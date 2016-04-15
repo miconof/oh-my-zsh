@@ -65,7 +65,8 @@ export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/repos/dotfiles/todo.txt
 
 # Set gem5 paths and environment variables
-export M5_PATH=$HOME/gem5/m5_system_2.0b3
+#export M5_PATH=$HOME/gem5/m5_system_2.0b3
+export M5_PATH=$HOME/projects/mb3/repos/gem5_path
 export CC=gcc
 export CXX=g++
 
@@ -90,8 +91,8 @@ export DRAMSIMPATH=$HOME/projects/AXLE/zsim/DRAMSim2
 export NVMAINPATH=$HOME/projects/AXLE/zsim/nvmain
 export ZSIMPATH=$HOME/projects/AXLE/zsim
 export PGPATH=$HOME/projects/AXLE/postgres
-export BOOST=$HOME/prog/boost
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$BOOST/stage/lib
+#export BOOST=$HOME/prog/boost
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$BOOST/stage/lib
 export SPECDIR=$HOME/projects/AXLE/SPECCPU2006
 
 # Set PATH for postgresql
@@ -99,3 +100,15 @@ export PATH=$PGPATH/build/bin:$PATH
 export PATH=$HOME/bin/monetdb/bin:$PATH
 
 export TERM=xterm-256color
+
+# MB3 stuff
+export TARGET=$HOME/projects/mb3/instdir/ompss
+export PATH=$TARGET/bin:$PATH
+export LD_LIBRARY_PATH=$TARGET/lib:$TARGET/lib/performance:$LD_LIBRARY_PATH
+export ROOT=$HOME/projects/mb3/repos/parsec-ompss/code
+export PARSEC_PATH=$HOME/projects/mb3/repos/parsec-ompss
+export HCA_PATH=$HOME/projects/mb3/repos/hca-apps
+export HPCAPPS_PATH=$HOME/projects/mb3/repos/hpc-apps
+export GEM5_PATH=$HOME/projects/mb3/repos/gem5-ompss
+export NANOS_PATH=$HOME/projects/mb3/sw/ompss-15.06/nanox-0.7.12a
+export MCC_PATH=$HOME/projects/mb3/sw/ompss-15.06/mcxx-1.99.8
