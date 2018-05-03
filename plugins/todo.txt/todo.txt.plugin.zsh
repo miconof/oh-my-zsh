@@ -8,5 +8,5 @@
 #}
 
 # Aliases
-alias t='todo.sh'
+alias t='clear; todo.sh'
 alias n="t ls +next"
