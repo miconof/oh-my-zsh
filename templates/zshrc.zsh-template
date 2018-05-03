@@ -67,8 +67,8 @@ export PATH=$PATH:$HOME/repos/dotfiles/todo.txt
 # Set gem5 paths and environment variables
 #export M5_PATH=$HOME/gem5/m5_system_2.0b3
 export M5_PATH=$HOME/projects/mb3/repos/gem5_path
-export CC=gcc
-export CXX=g++
+#export CC=gcc
+#export CXX=g++
 
 # Set other paths
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib:/usr/lib/llvm-3.4:/usr/lib/llvm-3.4/lib
@@ -104,11 +104,19 @@ export TERM=xterm-256color
 # MB3 stuff
 export TARGET=$HOME/projects/mb3/instdir/ompss
 export PATH=$TARGET/bin:$PATH
-export LD_LIBRARY_PATH=$TARGET/lib:$TARGET/lib/performance:$LD_LIBRARY_PATH
-export ROOT=$HOME/projects/mb3/repos/parsec-ompss/code
-export PARSEC_PATH=$HOME/projects/mb3/repos/parsec-ompss
+export LD_LIBRARY_PATH=$TARGET/lib:$LD_LIBRARY_PATH
+export ROOT=$HOME/projects/mb3/repos/parsecss
+export PARSEC_PATH=$HOME/projects/mb3/repos/parsecss
 export HCA_PATH=$HOME/projects/mb3/repos/hca-apps
 export HPCAPPS_PATH=$HOME/projects/mb3/repos/hpc-apps
+export PARAPPS_PATH=$HOME/projects/mb3/repos/parallel-apps
+export SVEAPPS_PATH=$HOME/projects/mb3/repos/gem5-sve/apps
 export GEM5_PATH=$HOME/projects/mb3/repos/gem5-ompss
-export NANOS_PATH=$HOME/projects/mb3/sw/ompss-15.06/nanox-0.7.12a
-export MCC_PATH=$HOME/projects/mb3/sw/ompss-15.06/mcxx-1.99.8
+export GEM5SVE_HOME=$HOME/projects/mb3/repos/gem5-sve
+export NANOS_PATH=$HOME/projects/mb3/sw/ompss-emilio/nanox-0.10a
+export MCC_PATH=$HOME/projects/mb3/sw/ompss-emilio/mcxx-1.99.8
+
+# BSC backup
+export LD_LIBRARY_PATH=/usr/local/lib/:$LD_LIBRARY_PATH
+
+export PYTHONPATH=$HOME/repos/paperplot:$PYTHONPATH
