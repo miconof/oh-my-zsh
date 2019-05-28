@@ -120,3 +120,6 @@ export MCC_PATH=$HOME/projects/mb3/sw/ompss-emilio/mcxx-1.99.8
 export LD_LIBRARY_PATH=/usr/local/lib/:$LD_LIBRARY_PATH
 
 export PYTHONPATH=$HOME/repos/paperplot:$PYTHONPATH
+
+### Alias
+alias sve='cd /home/aarmejach/projects/mb3/repos/gem5-sve'

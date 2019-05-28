@@ -57,6 +57,7 @@ exist_gh() { # [DIRECTORY]
     cd "$1"
     name="$( git config user.name )"
     ghuser="$( git config github.user )"
+}
 
 # git.io "GitHub URL"
 #
