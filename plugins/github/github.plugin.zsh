@@ -57,6 +57,10 @@ exist_gh() { # [DIRECTORY]
     cd "$1"
     name="$( git config user.name )"
     ghuser="$( git config github.user )"
+    repo="$1"
+
+    git remote add origin git@github.com:${ghuser}/${repo}.git
+    git push -u origin master
 }
 
 # git.io "GitHub URL"
