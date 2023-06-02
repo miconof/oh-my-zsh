@@ -56,7 +56,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git github debian mplayer todo.txt command-not-found mercurial vim)
+plugins=(git github debian mplayer taskwarrior command-not-found mercurial vim)
 
 # User configuration
 
@@ -93,18 +93,6 @@ source $ZSH/oh-my-zsh.sh
 # Set PATH for todo.txt
 export PATH=$PATH:$HOME/repos/dotfiles/todo.txt
 
-# Set gem5 paths and environment variables
-#export M5_PATH=$HOME/gem5/m5_system_2.0b3
-export M5_PATH=$HOME/projects/mb3/repos/gem5_path
-#export CC=gcc
-#export CXX=g++
-
-# Set other paths
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib:/usr/lib/llvm-3.4:/usr/lib/llvm-3.4/lib
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/:/usr/local/lib:/usr/local/lib/iljit
-export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
-export ILDJIT_PATH=/usr/local/lib/cscc/lib
-
 # SSH agent options
 #zstyle :omz:plugins:ssh-agent agent-forwarding on
 
@@ -131,9 +119,9 @@ export PATH=$HOME/bin/monetdb/bin:$PATH
 export TERM=xterm-256color
 
 # MB3 stuff
-export TARGET=$HOME/projects/mb3/instdir/ompss
-export PATH=$TARGET/bin:$PATH
-export LD_LIBRARY_PATH=$TARGET/lib:$LD_LIBRARY_PATH
+#export TARGET=$HOME/projects/mb3/instdir/ompss
+#export PATH=$TARGET/bin:$PATH
+#export LD_LIBRARY_PATH=$TARGET/lib:$LD_LIBRARY_PATH
 export ROOT=$HOME/projects/mb3/repos/parsecss
 export PARSEC_PATH=$HOME/projects/mb3/repos/parsecss
 export HCA_PATH=$HOME/projects/mb3/repos/hca-apps
@@ -145,10 +133,27 @@ export GEM5SVE_HOME=$HOME/projects/mb3/repos/gem5-sve
 export NANOS_PATH=$HOME/projects/mb3/sw/ompss-emilio/nanox-0.10a
 export MCC_PATH=$HOME/projects/mb3/sw/ompss-emilio/mcxx-1.99.8
 
+# gem5 setup
+export GEM5_SRCDIR=/home/aarmejach/projects/gem5/sources
+export GEM5_IMGDIR=/home/aarmejach/projects/gem5/images
+export GEM5_RESDIR=/home/aarmejach/projects/gem5/results
+export GEM5_BENCHDIR=/home/aarmejach/projects/gem5/benchmarks
+export M5_PATH=$GEM5_IMGDIR
+export SERT_USER=adria
+export SERT_HOME=/scratch/nas/3/$SERT_USER
+
 # BSC backup
-export LD_LIBRARY_PATH=/usr/local/lib/:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/lib64/:/usr/local/ibm/gsk8_64/lib64/:$LD_LIBRARY_PATH
 
 export PYTHONPATH=$HOME/repos/paperplot:$PYTHONPATH
 
-### Alias
-alias sve='cd /home/aarmejach/projects/mb3/repos/gem5-sve'
+### pyenv
+export PATH="/home/aarmejach/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+#epi-gem5 setup
+export SRCDIR=/home/aarmejach/projects/gem5/sources
+export IMGDIR=/home/aarmejach/projects/gem5/images
+export RUNDIR=/home/aarmejach/projects/gem5/runs
+
