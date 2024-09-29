@@ -427,3 +427,38 @@ for old_alias new_alias (
     $new_alias"
 done
 unset old_alias new_alias
+
+compdef _git gcp=git-cherry-pick
+alias glg='git log --stat --max-count=10'
+compdef _git glg=git-log
+alias glgg='git log --graph --max-count=10'
+compdef _git glgg=git-log
+alias glgga='git log --graph --decorate --all'
+compdef _git glgga=git-log
+alias glo='git log --oneline --decorate --color'
+compdef _git glo=git-log
+alias glog='git log --oneline --decorate --color --graph'
+compdef _git glog=git-log
+alias gss='git status -s'
+compdef _git gss=git-status
+alias ga='git add'
+compdef _git ga=git-add
+alias gap='git add --patch'
+alias gm='git merge'
+compdef _git gm=git-merge
+alias grh='git reset HEAD'
+alias grhh='git reset HEAD --hard'
+alias glogpretty="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+compdef _git glg=git-log
+alias gdcolor='git diff --color=always -U2'
+compdef _git gd=git-diff
+alias gdw='git diff --color=always --color-words -U2'
+compdef _git gd=git-diff
+alias gclean='git reset --hard && git clean -dfx'
+alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+compdef _git glg=git-log
+alias gd='git diff --color=always -U2'
+compdef _git gd=git-diff
+alias gdw='git diff --color=always --color-words -U2'
+compdef _git gd=git-diff
