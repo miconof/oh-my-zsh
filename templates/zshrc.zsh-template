@@ -68,7 +68,7 @@ plugins=(git github debian mplayer taskwarrior command-not-found mercurial vim)
 
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
 export MANPATH=/usr/local/man:$MANPATH
 
 source $ZSH/oh-my-zsh.sh
@@ -146,6 +146,8 @@ export GEM5_BENCHDIR=/home/aarmejach/projects/gem5/benchmarks
 export M5_PATH=$GEM5_IMGDIR
 export SERT_USER=adria
 export SERT_HOME=/scratch/nas/3/$SERT_USER
+export AMD_USER=bsc018710
+export AMD_HOME=/gpfs/scratch/bsc18/$AMD_USER
 
 # BSC backup
 export LD_LIBRARY_PATH=/usr/lib64/:/usr/local/ibm/gsk8_64/lib64/:$LD_LIBRARY_PATH
@@ -153,7 +155,7 @@ export LD_LIBRARY_PATH=/usr/lib64/:/usr/local/ibm/gsk8_64/lib64/:$LD_LIBRARY_PAT
 export PYTHONPATH=$HOME/repos/paperplot:$PYTHONPATH
 
 ### pyenv
-export PATH="/home/aarmejach/.pyenv/bin:$PATH"
+export PATH="/home/aarmejach/.pyenv/bin:$HOME/.local/bin/:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
@@ -161,4 +163,7 @@ eval "$(pyenv virtualenv-init -)"
 export SRCDIR=/home/aarmejach/projects/gem5/sources
 export IMGDIR=/home/aarmejach/projects/gem5/images
 export RUNDIR=/home/aarmejach/projects/gem5/runs
+
+# Modelsim
+export LD_LIBRARY_PATH=~/altera/13.0sp1/lib32:$LD_LIBRARY_PATH
 

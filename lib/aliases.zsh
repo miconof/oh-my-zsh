@@ -22,3 +22,16 @@ alias la='ls -a'
 alias sl=ls # often screw this up
 
 alias afind='ack-grep -il'
+
+# tmux
+function _tmux()
+{
+    if [[ $# == 0 ]] && command tmux ls >& /dev/null; then
+        command tmux attach \; choose-tree -s
+    else
+        command tmux "$@"
+    fi
+}
+
+alias tmux=_tmux
+
