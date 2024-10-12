@@ -160,9 +160,9 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 #epi-gem5 setup
-export SRCDIR=/home/aarmejach/projects/gem5/sources
-export IMGDIR=/home/aarmejach/projects/gem5/images
-export RUNDIR=/home/aarmejach/projects/gem5/runs
+export SRCDIR=/home/aarmejach/projects/gem5-rv/sources
+export IMGDIR=/home/aarmejach/projects/gem5-rv/images
+export RUNDIR=/home/aarmejach/projects/gem5-rv/runs
 
 # Modelsim
 export LD_LIBRARY_PATH=~/altera/13.0sp1/lib32:$LD_LIBRARY_PATH
