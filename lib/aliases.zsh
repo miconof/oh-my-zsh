@@ -35,3 +35,7 @@ function _tmux()
 
 alias tmux=_tmux
 
+# nvim
+alias n="nvim"
+alias vi="nvim"
+alias vimdiff="nvim -d"
