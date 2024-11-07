@@ -39,3 +39,9 @@ alias tmux=_tmux
 alias n="nvim"
 alias vi="nvim"
 alias vimdiff="nvim -d"
+
+# bat
+alias bat=batcat
+
+# fd
+alias fd=fdfind
