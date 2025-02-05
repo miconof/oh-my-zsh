@@ -68,7 +68,7 @@ plugins=(git github debian mplayer taskwarrior command-not-found mercurial vim f
 
 # User configuration
 
-export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:/opt/riscv/bin:$PATH
 export MANPATH=/usr/local/man:$MANPATH
 
 # fzf configuration
